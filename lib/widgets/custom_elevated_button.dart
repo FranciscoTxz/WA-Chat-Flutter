@@ -81,7 +81,7 @@ class CustomElevatedButton extends StatelessWidget {
                   child: Icon(
                     Icons.circle_notifications,
                     size: 22,
-                    color: Colors.green,
+                    color: Color(0xFFf0190a),
                   ),
                 ),
               )

@@ -50,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
         ),
-        backgroundColor: Color.fromRGBO(34, 153, 60, 1),
+        backgroundColor: Color(0xFF9e0f05),
       ),
       body: PageView(
         controller: _pageController,
@@ -69,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
-        selectedItemColor: Colors.green,
+        selectedItemColor: Color(0xFFf0190a),
         unselectedItemColor: Colors.white,
         backgroundColor: Colors.black,
         type: BottomNavigationBarType.fixed,
