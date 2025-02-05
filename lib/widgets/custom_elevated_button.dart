@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -31,7 +32,16 @@ class CustomElevatedButton extends StatelessWidget {
           //PP
           CircleAvatar(
             radius: 30,
-            backgroundImage: AssetImage("assets/gojo.png"),
+            backgroundColor: Colors.grey[300],
+            child: ClipOval(
+              child: CachedNetworkImage(
+                imageUrl: chats['profile_image'],
+                placeholder: (context, url) => CircularProgressIndicator(),
+                errorWidget: (context, url, error) =>
+                    Icon(Icons.error, color: Colors.red),
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 10.0, right: 8.0),
@@ -94,5 +104,5 @@ class CustomElevatedButton extends StatelessWidget {
 }
 
 String cambiar(String texto) {
-  return texto.length > 20 ? '${texto.substring(0, 20)}...' : texto;
+  return texto.length > 25 ? '${texto.substring(0, 25)}...' : texto;
 }
