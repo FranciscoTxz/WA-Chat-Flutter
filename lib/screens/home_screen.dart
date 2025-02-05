@@ -45,7 +45,6 @@ class _HomeScreenState extends State<HomeScreen> {
         },
         children: [
           ChatScreen(changeTab: _onItemTapped),
-          GroupScreen(),
           StatusScreen(),
           CallsScreen(),
         ],
@@ -59,7 +58,6 @@ class _HomeScreenState extends State<HomeScreen> {
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'Chats'),
-          BottomNavigationBarItem(icon: Icon(Icons.group), label: 'Grupos'),
           BottomNavigationBarItem(
               icon: Icon(Icons.camera_alt), label: 'Estados'),
           BottomNavigationBarItem(icon: Icon(Icons.call), label: 'Llamadas'),

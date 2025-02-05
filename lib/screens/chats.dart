@@ -35,25 +35,20 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Expanded(
-            child: ListView.builder(
-              itemCount: chats.length,
-              itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.only(
-                      left: 5, right: 5, top: 3.0, bottom: 3.0),
-                  child: CustomElevatedButton(
-                    chats: chats[index],
-                    onPressed: () => onButtonPressed(index),
-                  ),
-                );
-              },
-            ),
-          ),
-        ],
+      child: Expanded(
+        child: ListView.builder(
+          itemCount: chats.length,
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: const EdgeInsets.only(
+                  left: 5, right: 5, top: 3.0, bottom: 3.0),
+              child: CustomElevatedButton(
+                chats: chats[index],
+                onPressed: () => onButtonPressed(index),
+              ),
+            );
+          },
+        ),
       ),
     );
   }
