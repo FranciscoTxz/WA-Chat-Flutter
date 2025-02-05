@@ -21,7 +21,7 @@ class _ChatScreenState extends State<ChatScreen> {
   }
 
   Future<void> loadJson() async {
-    String jsonString = await rootBundle.loadString('assets/info.json');
+    String jsonString = await rootBundle.loadString('assets/new_info.json');
     final List<dynamic> jsonData = json.decode(jsonString);
     setState(() {
       chats = jsonData;
