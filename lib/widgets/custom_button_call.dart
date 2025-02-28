@@ -34,7 +34,7 @@ class CustomButtonCall extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           CircleAvatar(
-            radius: 25,
+            radius: 23,
             backgroundColor: Colors.grey[300],
             child: ClipOval(
               child: CachedNetworkImage(
@@ -70,17 +70,18 @@ class CustomButtonCall extends StatelessWidget {
           ),
           Spacer(),
           Padding(
-            padding: const EdgeInsets.only(right: 8.0),
+            padding: const EdgeInsets.only(right: 3.0),
             child: Text(
               DateFormat("hh:mm a").format(DateTime.parse(callInfo['date'])),
               style: TextStyle(fontSize: 10, color: ColorsPrime.grey),
             ),
           ),
           IconButton(
-              iconSize: 23,
-              color: Colors.black,
-              onPressed: () {},
-              icon: Icon(Icons.info_outline_rounded))
+            iconSize: 23,
+            color: Colors.black,
+            onPressed: () {},
+            icon: Icon(Icons.info_outline_rounded),
+          )
         ],
       ),
     );
