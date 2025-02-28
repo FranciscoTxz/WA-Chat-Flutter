@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Carlos Mendoza",
+    "type": 1,
+    "image": "https://randomuser.me/api/portraits/men/1.jpg",
+    "date": "2024-02-28T14:30:00Z"
+  },
+  {
+    "name": "Andrea López",
+    "type": 0,
+    "image": "https://randomuser.me/api/portraits/women/2.jpg",
+    "date": "2024-02-28T12:15:00Z"
+  },
+  {
+    "name": "Luis Fernández",
+    "type": 2,
+    "image": "https://randomuser.me/api/portraits/men/3.jpg",
+    "date": "2024-02-27T20:45:00Z"
+  },
+  {
+    "name": "María Torres",
+    "type": 1,
+    "image": "https://randomuser.me/api/portraits/women/4.jpg",
+    "date": "2024-02-27T18:10:00Z"
+  },
+  {
+    "name": "Javier Pérez",
+    "type": 0,
+    "image": "https://randomuser.me/api/portraits/men/5.jpg",
+    "date": "2024-02-27T08:50:00Z"
+  },
+  {
+    "name": "Sofía Ramírez",
+    "type": 2,
+    "image": "https://randomuser.me/api/portraits/women/6.jpg",
+    "date": "2024-02-26T23:30:00Z"
+  },
+  {
+    "name": "Fernando Ríos",
+    "type": 1,
+    "image": "https://randomuser.me/api/portraits/men/7.jpg",
+    "date": "2024-02-26T15:05:00Z"
+  },
+  {
+    "name": "Laura Gómez",
+    "type": 0,
+    "image": "https://randomuser.me/api/portraits/women/8.jpg",
+    "date": "2024-02-25T17:40:00Z"
+  },
+  {
+    "name": "Diego Castro",
+    "type": 0,
+    "image": "https://randomuser.me/api/portraits/men/9.jpg",
+    "date": "2024-02-25T10:20:00Z"
+  },
+  {
+    "name": "Elena Vargas",
+    "type": 1,
+    "image": "https://randomuser.me/api/portraits/women/10.jpg",
+    "date": "2024-02-24T22:50:00Z"
+  },
+  {
+    "name": "Rodrigo Salinas",
+    "type": 2,
+    "image": "https://randomuser.me/api/portraits/men/11.jpg",
+    "date": "2024-02-24T16:30:00Z"
+  },
+  {
+    "name": "Valeria Suárez",
+    "type": 0,
+    "image": "https://randomuser.me/api/portraits/women/12.jpg",
+    "date": "2024-02-23T19:10:00Z"
+  },
+  {
+    "name": "Emilio Ortega",
+    "type": 1,
+    "image": "https://randomuser.me/api/portraits/men/13.jpg",
+    "date": "2024-02-23T14:55:00Z"
+  },
+  {
+    "name": "Camila Herrera",
+    "type": 2,
+    "image": "https://randomuser.me/api/portraits/women/14.jpg",
+    "date": "2024-02-22T21:20:00Z"
+  },
+  {
+    "name": "Gabriel Núñez",
+    "type": 0,
+    "image": "https://randomuser.me/api/portraits/men/15.jpg",
+    "date": "2024-02-22T12:40:00Z"
+  },
+  {
+    "name": "Natalia Espinoza",
+    "type": 1,
+    "image": "https://randomuser.me/api/portraits/women/16.jpg",
+    "date": "2024-02-21T08:30:00Z"
+  }
+]

@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:simple_menu/resources/functions/correct_text.dart';
 
 class CustomElevatedButton extends StatelessWidget {
   CustomElevatedButton(
@@ -50,7 +51,7 @@ class CustomElevatedButton extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  cambiar(chats['name']),
+                  corregir(chats['name']),
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontSize: 16,
@@ -58,11 +59,12 @@ class CustomElevatedButton extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  cambiar(chats['messages'][chats['messages'].length - 1]
+                  corregir(chats['messages'][chats['messages'].length - 1]
                       ['message']),
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontSize: 12,
+                    fontWeight: FontWeight.normal,
                     color: Colors.black,
                   ),
                 )
@@ -101,8 +103,4 @@ class CustomElevatedButton extends StatelessWidget {
       ),
     );
   }
-}
-
-String cambiar(String texto) {
-  return texto.length > 25 ? '${texto.substring(0, 25)}...' : texto;
 }
