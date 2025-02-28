@@ -6,6 +6,7 @@ import 'package:simple_menu/widgets/widgets.dart';
 
 class ChatScreen extends StatefulWidget {
   final Function(int) changeTab;
+
   const ChatScreen({super.key, required this.changeTab});
 
   @override
@@ -34,22 +35,38 @@ class _ChatScreenState extends State<ChatScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Expanded(
-        child: ListView.builder(
-          itemCount: chats.length,
-          itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.only(
-                  left: 5, right: 5, top: 3.0, bottom: 3.0),
-              child: CustomElevatedButton(
-                chats: chats[index],
-                onPressed: () => onButtonPressed(index),
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(
+                left: 12.0, top: 0.0, right: 12.0, bottom: 12.0),
+            child: Text(
+              "Chats",
+              style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
+            ),
+          ),
+          Column(
+            children: List.generate(
+              chats.length,
+              (index) => Padding(
+                padding: const EdgeInsets.only(
+                    left: 5, right: 5, top: 3.0, bottom: 3.0),
+                child: CustomElevatedButton(
+                  chats: chats[index],
+                  onPressed: () => onButtonPressed(index),
+                ),
               ),
-            );
-          },
-        ),
+            ),
+          ),
+        ],
       ),
     );
+    //);
   }
 }

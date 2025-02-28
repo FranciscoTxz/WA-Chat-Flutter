@@ -17,8 +17,8 @@ class CustomElevatedButton extends StatelessWidget {
         elevation: WidgetStatePropertyAll(2),
         overlayColor: WidgetStatePropertyAll(Colors.grey),
         backgroundColor: WidgetStatePropertyAll(Colors.white),
-        minimumSize: WidgetStatePropertyAll(Size(200, 45)),
-        maximumSize: WidgetStatePropertyAll(Size(200, 75)),
+        minimumSize: WidgetStatePropertyAll(Size(double.infinity, 50)),
+        maximumSize: WidgetStatePropertyAll(Size(double.infinity, 75)),
         shape: WidgetStateProperty.all(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(5),

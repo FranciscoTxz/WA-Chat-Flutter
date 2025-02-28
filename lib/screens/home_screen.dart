@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simple_menu/screens/screens.dart';
+import 'package:simple_menu/widgets/widgets.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -23,19 +24,24 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  PreferredSizeWidget _getAppBar(int index) {
+    switch (index) {
+      case 0:
+        return AppBarCustomScreenOne();
+      case 1:
+        return AppBarCustomScreenTwo();
+      case 2:
+        return AppBarCustomScreenThree();
+      default:
+        return AppBarCustomScreenOne();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
-      appBar: AppBar(
-        title: Center(
-          child: Text(
-            'WA CHAT',
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-          ),
-        ),
-        backgroundColor: Color(0xFF9e0f05),
-      ),
+      backgroundColor: Color(0xFF1C1C1C),
+      appBar: _getAppBar(_selectedIndex),
       body: PageView(
         controller: _pageController,
         onPageChanged: (index) {

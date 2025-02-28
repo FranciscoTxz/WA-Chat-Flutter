@@ -5,6 +5,28 @@ class CallsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('Llamadas', style: TextStyle(fontSize: 24)));
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Text(
+              "Mi Lista de Elementos",
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Column(
+            children: List.generate(
+              50,
+              (index) => ListTile(
+                title: Text("Elemento $index"),
+                leading: Icon(Icons.star),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
