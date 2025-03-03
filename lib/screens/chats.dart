@@ -5,9 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:simple_menu/widgets/widgets.dart';
 
 class ChatScreen extends StatefulWidget {
-  final Function(int) changeTab;
-
-  const ChatScreen({super.key, required this.changeTab});
+  const ChatScreen({super.key});
 
   @override
   State<ChatScreen> createState() => _ChatScreenState();
