@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -15,7 +13,6 @@ class AppBarCustomScreenOne extends StatefulWidget
 }
 
 class _AppBarCustomScreenOneState extends State<AppBarCustomScreenOne> {
-  File? _image;
   final ImagePicker _picker = ImagePicker();
 
   // Métod0 para abrir la cámara
@@ -24,9 +21,7 @@ class _AppBarCustomScreenOneState extends State<AppBarCustomScreenOne> {
         await _picker.pickImage(source: ImageSource.camera);
 
     if (pickedFile != null) {
-      setState(() {
-        _image = File(pickedFile.path);
-      });
+      setState(() {});
     }
   }
 

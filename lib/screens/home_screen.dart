@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:simple_menu/screens/screens.dart';
 import 'package:simple_menu/widgets/widgets.dart';
-import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
