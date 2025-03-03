@@ -7,4 +7,6 @@ abstract final class ColorsPrime {
   static const Color grey2 = Color(0xFFA4A4A4);
   static const Color red = Color(0xFFf0190a);
   static const Color black = Color(0xFF000000);
+  static const Color greySearchBar = Color(0xFF252525);
+  static const Color greySearchBarText = Color(0xFF818181);
 }

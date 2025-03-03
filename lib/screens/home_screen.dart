@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'Chats'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.camera_alt), label: 'Estados'),
+              icon: Icon(Icons.newspaper_rounded), label: 'Novedades'),
           BottomNavigationBarItem(icon: Icon(Icons.call), label: 'Llamadas'),
         ],
       ),

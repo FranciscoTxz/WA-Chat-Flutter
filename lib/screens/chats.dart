@@ -49,6 +49,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   color: Colors.white),
             ),
           ),
+          SearchBarCustom(),
           Column(
             children: List.generate(
               chats.length,
