@@ -24,7 +24,18 @@ class _StatusScreenState extends State<StatusScreen> {
                 fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white),
           ),
         ),
-        SearchBarCustom()
+        SearchBarCustom(),
+        //TODO NEWS
+        Expanded(
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal, // Cambiar a horizontal
+            itemCount: 10, // Número de items
+            itemBuilder: (context, index) {
+              return StatusCard(index: index);
+            },
+          ),
+        ),
+        Expanded(child: Container())
       ],
     );
   }
