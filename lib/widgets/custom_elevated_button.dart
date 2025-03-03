@@ -4,10 +4,10 @@ import 'package:intl/intl.dart';
 import 'package:simple_menu/resources/functions/correct_text.dart';
 
 class CustomElevatedButton extends StatelessWidget {
-  CustomElevatedButton(
+  const CustomElevatedButton(
       {super.key, required this.chats, required this.onPressed});
 
-  Map<String, dynamic> chats;
+  final Map<String, dynamic> chats;
 
   final VoidCallback onPressed;
   @override
@@ -39,7 +39,7 @@ class CustomElevatedButton extends StatelessWidget {
                 imageUrl: chats['profile_image'],
                 placeholder: (context, url) => CircularProgressIndicator(),
                 errorWidget: (context, url, error) =>
-                    Icon(Icons.error, color: Colors.red),
+                    const Icon(Icons.error, color: Colors.red),
                 fit: BoxFit.cover,
               ),
             ),

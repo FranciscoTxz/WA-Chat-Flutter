@@ -6,10 +6,10 @@ import 'package:simple_menu/resources/functions/row_button_call.dart';
 import 'package:simple_menu/resources/functions/correct_text.dart';
 
 class CustomButtonCall extends StatelessWidget {
-  CustomButtonCall(
+  const CustomButtonCall(
       {super.key, required this.callInfo, required this.onPressed});
 
-  Map<String, dynamic> callInfo;
+  final Map<String, dynamic> callInfo;
 
   final VoidCallback onPressed;
 
