@@ -13,19 +13,32 @@ class StatusScreen extends StatefulWidget {
 
 class _StatusScreenState extends State<StatusScreen> {
   late List<dynamic> status = [];
+  late List<dynamic> channels = [];
 
   @override
   void initState() {
     super.initState();
-    loadJson();
+    loadJsons();
   }
 
-  Future<void> loadJson() async {
+  Future<void> loadJsons() async {
     String jsonString = await rootBundle.loadString('assets/status_info.json');
+    String jsonStringChannels =
+        await rootBundle.loadString('assets/channels.json');
     final List<dynamic> jsonData = json.decode(jsonString);
+    final List<dynamic> jsonDataChannels = json.decode(jsonStringChannels);
     setState(() {
       status = jsonData;
+      channels = jsonDataChannels;
     });
+  }
+
+  void onButtonPressed(int index) {
+    print("Se tocó la tarjeta de ${status[index]["nombre"]}");
+  }
+
+  void onButtonPressed2(int index) {
+    print("Se tocó la tarjeta de ${channels[index]["nombre"]}");
   }
 
   @override
@@ -59,11 +72,12 @@ class _StatusScreenState extends State<StatusScreen> {
         Expanded(
           child: ListView.builder(
             scrollDirection: Axis.horizontal, // Cambiar a horizontal
-            itemCount: 10, // Número de items
+            itemCount: status.length, // Número de items
             itemBuilder: (context, index) {
               return StatusCard(
-                index: index,
-              );
+                  index: index,
+                  onPressed: () => onButtonPressed(index),
+                  stats: status);
             },
           ),
         ),
@@ -80,10 +94,14 @@ class _StatusScreenState extends State<StatusScreen> {
         ),
         Expanded(
           child: ListView.builder(
-            scrollDirection: Axis.horizontal, // Cambiar a horizontal
-            itemCount: 10, // Número de items
+            scrollDirection: Axis.vertical,
+            itemCount: channels.length,
             itemBuilder: (context, index) {
-              return StatusCard(index: index);
+              return CustomElevatedButtonChannels(
+                index: index,
+                onPressed: () => onButtonPressed2(index),
+                channel: channels[index],
+              );
             },
           ),
         )

@@ -35,12 +35,19 @@ class CustomElevatedButton extends StatelessWidget {
             radius: 30,
             backgroundColor: Colors.grey[300],
             child: ClipOval(
-              child: CachedNetworkImage(
-                imageUrl: chats['profile_image'],
-                placeholder: (context, url) => CircularProgressIndicator(),
-                errorWidget: (context, url, error) =>
-                    const Icon(Icons.error, color: Colors.red),
-                fit: BoxFit.cover,
+              child: AspectRatio(
+                aspectRatio: 1,
+                child: CachedNetworkImage(
+                  imageUrl: chats["profile_image"],
+                  placeholder: (context, url) => SizedBox(
+                    width: double.infinity,
+                    height: double.infinity,
+                    child: Center(child: CircularProgressIndicator()),
+                  ),
+                  errorWidget: (context, url, error) =>
+                      const Icon(Icons.error, color: Colors.red),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           ),
