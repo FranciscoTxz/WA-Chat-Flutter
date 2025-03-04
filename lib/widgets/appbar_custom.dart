@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
+import '../resources/colors/colors_prime.dart';
+
 class AppBarCustomScreenOne extends StatefulWidget
     implements PreferredSizeWidget {
   const AppBarCustomScreenOne({super.key});
@@ -15,7 +17,6 @@ class AppBarCustomScreenOne extends StatefulWidget
 class _AppBarCustomScreenOneState extends State<AppBarCustomScreenOne> {
   final ImagePicker _picker = ImagePicker();
 
-  // Métod0 para abrir la cámara
   Future<void> _openCamera() async {
     final XFile? pickedFile =
         await _picker.pickImage(source: ImageSource.camera);
@@ -33,25 +34,25 @@ class _AppBarCustomScreenOneState extends State<AppBarCustomScreenOne> {
           IconButton(
             icon: Icon(Icons.more_horiz_rounded),
             iconSize: 30,
-            color: Colors.white,
+            color: ColorsPrime.white,
             onPressed: () {},
           ),
           Spacer(),
           IconButton(
             icon: Icon(Icons.camera_alt),
             iconSize: 30,
-            color: Colors.white,
+            color: ColorsPrime.white,
             onPressed: _openCamera,
           ),
           IconButton(
             icon: Icon(Icons.add_circle_outlined),
             iconSize: 34,
-            color: Colors.red,
+            color: ColorsPrime.red,
             onPressed: () {},
           ),
         ],
       ),
-      backgroundColor: Color(0xFF1C1C1C),
+      backgroundColor: ColorsPrime.backGround,
     );
   }
 }
@@ -66,13 +67,13 @@ class AppBarCustomScreenTwo extends StatelessWidget
           IconButton(
             icon: Icon(Icons.more_horiz_rounded),
             iconSize: 30,
-            color: Colors.white,
+            color: ColorsPrime.white,
             onPressed: () {},
           ),
           Spacer(),
         ],
       ),
-      backgroundColor: Color(0xFF1C1C1C),
+      backgroundColor: ColorsPrime.backGround,
     );
   }
 
@@ -90,19 +91,19 @@ class AppBarCustomScreenThree extends StatelessWidget
           IconButton(
             icon: Icon(Icons.more_horiz_rounded),
             iconSize: 30,
-            color: Colors.white,
+            color: ColorsPrime.white,
             onPressed: () {},
           ),
           Spacer(),
           IconButton(
             icon: Icon(Icons.add_circle_outlined),
             iconSize: 34,
-            color: Colors.red,
+            color: ColorsPrime.red,
             onPressed: () {},
           ),
         ],
       ),
-      backgroundColor: Color(0xFF1C1C1C),
+      backgroundColor: ColorsPrime.backGround,
     );
   }
 

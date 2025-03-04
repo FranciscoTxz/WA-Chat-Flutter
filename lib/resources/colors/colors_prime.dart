@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
+
 abstract final class ColorsPrime {
   /// Completely invisible.
   static const Color white = Color(0xFFFFFFFF);
@@ -7,9 +9,39 @@ abstract final class ColorsPrime {
   static const Color grey2 = Color(0xFFA4A4A4);
   static const Color red = Color(0xFFf0190a);
   static const Color black = Color(0xFF000000);
+
+  // Home Screen
+  static const Color selectedItemColor = Color(0xFFf0190a);
+  static const Color backGround = Color(0xFF1C1C1C);
+
+  //Custom Elevated Button
+  static const Color notifIcon = Color(0xFFf0190a);
+  static const MaterialColor greyP = MaterialColor(
+    _greyPrimaryValue,
+    <int, Color>{
+      50: Color(0xFFFAFAFA),
+      100: Color(0xFFF5F5F5),
+      200: Color(0xFFEEEEEE),
+      300: Color(0xFFE0E0E0),
+      350: Color(
+          0xFFD6D6D6), // only for raised button while pressed in light theme
+      400: Color(0xFFBDBDBD),
+      500: Color(_greyPrimaryValue),
+      600: Color(0xFF757575),
+      700: Color(0xFF616161),
+      800: Color(0xFF424242),
+      850: Color(0xFF303030), // only for background color in dark theme
+      900: Color(0xFF212121),
+    },
+  );
+  static const int _greyPrimaryValue = 0xFF9E9E9E;
+
+  //Search Bar
   static const Color greySearchBar = Color(0xFF252525);
   static const Color greySearchBarText = Color(0xFF818181);
-  static const Color blackShadow = Color(0xB2000000);
-  static const Color greenStatus = Color(0xB2FF0000);
+
+  // Status Card
+  static const Color redStatus = Color(0xB2FF0000);
   static const Color greyStatus = Color(0xB23D3D3D);
+  static const Color blackShadow = Color(0xB2000000);
 }

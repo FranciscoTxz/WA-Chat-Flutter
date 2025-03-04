@@ -29,7 +29,7 @@ class AddStatusCard extends StatelessWidget {
                     children: [
                       CircleAvatar(
                         radius: 30,
-                        backgroundColor: Colors.grey[300],
+                        backgroundColor: ColorsPrime.greyP[300],
                         child: ClipOval(
                           child: Image.asset("assets/gojo.png"),
                         ),

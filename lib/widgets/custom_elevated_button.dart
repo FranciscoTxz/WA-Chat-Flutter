@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:simple_menu/resources/colors/colors_prime.dart';
 import 'package:simple_menu/resources/functions/correct_text.dart';
 
 class CustomElevatedButton extends StatelessWidget {
@@ -14,10 +15,10 @@ class CustomElevatedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ButtonStyle(
-        shadowColor: WidgetStatePropertyAll(Colors.black),
+        shadowColor: WidgetStatePropertyAll(ColorsPrime.black),
         elevation: WidgetStatePropertyAll(2),
-        overlayColor: WidgetStatePropertyAll(Colors.grey),
-        backgroundColor: WidgetStatePropertyAll(Colors.white),
+        overlayColor: WidgetStatePropertyAll(ColorsPrime.greyP),
+        backgroundColor: WidgetStatePropertyAll(ColorsPrime.white),
         minimumSize: WidgetStatePropertyAll(Size(double.infinity, 50)),
         maximumSize: WidgetStatePropertyAll(Size(double.infinity, 75)),
         shape: WidgetStateProperty.all(
@@ -33,7 +34,7 @@ class CustomElevatedButton extends StatelessWidget {
           //PP
           CircleAvatar(
             radius: 30,
-            backgroundColor: Colors.grey[300],
+            backgroundColor: ColorsPrime.greyP[300],
             child: ClipOval(
               child: AspectRatio(
                 aspectRatio: 1,
@@ -45,7 +46,7 @@ class CustomElevatedButton extends StatelessWidget {
                     child: Center(child: CircularProgressIndicator()),
                   ),
                   errorWidget: (context, url, error) =>
-                      const Icon(Icons.error, color: Colors.red),
+                      const Icon(Icons.error, color: ColorsPrime.red),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -62,7 +63,7 @@ class CustomElevatedButton extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontSize: 16,
-                    color: Colors.black,
+                    color: ColorsPrime.black,
                   ),
                 ),
                 Text(
@@ -72,7 +73,7 @@ class CustomElevatedButton extends StatelessWidget {
                   style: const TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.normal,
-                    color: Colors.black,
+                    color: ColorsPrime.black,
                   ),
                 )
               ],
@@ -86,7 +87,7 @@ class CustomElevatedButton extends StatelessWidget {
                 child: Text(
                   DateFormat("hh:mm a").format(DateTime.parse(chats['messages']
                       [chats['messages'].length - 1]['timestamp'])),
-                  style: TextStyle(fontSize: 10, color: Colors.grey),
+                  style: TextStyle(fontSize: 10, color: ColorsPrime.grey),
                 ),
               ),
               Visibility(
@@ -100,7 +101,7 @@ class CustomElevatedButton extends StatelessWidget {
                   child: Icon(
                     Icons.circle_notifications,
                     size: 22,
-                    color: Color(0xFFf0190a),
+                    color: ColorsPrime.notifIcon,
                   ),
                 ),
               )

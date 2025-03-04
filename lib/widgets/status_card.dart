@@ -36,7 +36,7 @@ class StatusCard extends StatelessWidget {
               color: ColorsPrime.greyStatus,
               child: Center(
                 child: CircularProgressIndicator(
-                  color: ColorsPrime.greenStatus,
+                  color: ColorsPrime.redStatus,
                 ),
               ),
             ),
@@ -49,7 +49,7 @@ class StatusCard extends StatelessWidget {
             onTap: onPressed,
             child: Card(
               color: stats[index]["visto"] == 1
-                  ? ColorsPrime.greenStatus
+                  ? ColorsPrime.redStatus
                   : ColorsPrime.greyStatus,
               elevation: 5,
               shape: RoundedRectangleBorder(
@@ -67,7 +67,7 @@ class StatusCard extends StatelessWidget {
                           placeholder: (context, url) =>
                               CircularProgressIndicator(),
                           errorWidget: (context, url, error) =>
-                              const Icon(Icons.error, color: Colors.red),
+                              const Icon(Icons.error, color: ColorsPrime.red),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -77,14 +77,14 @@ class StatusCard extends StatelessWidget {
                       left: 10,
                       child: CircleAvatar(
                         radius: 30,
-                        backgroundColor: Colors.grey[300],
+                        backgroundColor: ColorsPrime.greyP[300],
                         child: ClipOval(
                           child: CachedNetworkImage(
                             imageUrl: stats[index]["pp"]?.toString() ?? "",
                             placeholder: (context, url) =>
                                 CircularProgressIndicator(),
                             errorWidget: (context, url, error) =>
-                                const Icon(Icons.error, color: Colors.red),
+                                const Icon(Icons.error, color: ColorsPrime.red),
                             fit: BoxFit.cover,
                           ),
                         ),

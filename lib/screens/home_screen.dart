@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_menu/resources/colors/colors_prime.dart';
 import 'package:simple_menu/screens/screens.dart';
 import 'package:simple_menu/widgets/widgets.dart';
 
@@ -47,15 +48,15 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF1C1C1C),
+      backgroundColor: ColorsPrime.backGround,
       appBar: _getAppBar(_selectedIndex),
       body: _getScreen(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
-        selectedItemColor: Color(0xFFf0190a),
-        unselectedItemColor: Colors.white,
-        backgroundColor: Colors.black,
+        selectedItemColor: ColorsPrime.selectedItemColor,
+        unselectedItemColor: ColorsPrime.white,
+        backgroundColor: ColorsPrime.black,
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'Chats'),

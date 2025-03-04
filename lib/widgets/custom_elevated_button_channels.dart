@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:simple_menu/resources/functions/correct_text.dart';
 
+import '../resources/colors/colors_prime.dart';
+
 class CustomElevatedButtonChannels extends StatelessWidget {
   const CustomElevatedButtonChannels(
       {super.key,
@@ -20,10 +22,10 @@ class CustomElevatedButtonChannels extends StatelessWidget {
       padding: const EdgeInsets.only(left: 5, right: 5, top: 3.0, bottom: 3.0),
       child: ElevatedButton(
         style: ButtonStyle(
-          shadowColor: WidgetStatePropertyAll(Colors.black),
+          shadowColor: WidgetStatePropertyAll(ColorsPrime.black),
           elevation: WidgetStatePropertyAll(2),
-          overlayColor: WidgetStatePropertyAll(Colors.grey),
-          backgroundColor: WidgetStatePropertyAll(Colors.white),
+          overlayColor: WidgetStatePropertyAll(ColorsPrime.greyP),
+          backgroundColor: WidgetStatePropertyAll(ColorsPrime.white),
           minimumSize: WidgetStatePropertyAll(Size(double.infinity, 80)),
           maximumSize: WidgetStatePropertyAll(Size(double.infinity, 85)),
           shape: WidgetStateProperty.all(
@@ -39,7 +41,7 @@ class CustomElevatedButtonChannels extends StatelessWidget {
             //PP
             CircleAvatar(
               radius: 33,
-              backgroundColor: Colors.grey[300],
+              backgroundColor: ColorsPrime.greyP[300],
               child: ClipOval(
                 child: AspectRatio(
                   aspectRatio: 1,
@@ -51,7 +53,7 @@ class CustomElevatedButtonChannels extends StatelessWidget {
                       child: Center(child: CircularProgressIndicator()),
                     ),
                     errorWidget: (context, url, error) =>
-                        const Icon(Icons.error, color: Colors.red),
+                        const Icon(Icons.error, color: ColorsPrime.red),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -75,7 +77,7 @@ class CustomElevatedButtonChannels extends StatelessWidget {
                             overflow: TextOverflow.ellipsis,
                             style: const TextStyle(
                               fontSize: 16,
-                              color: Colors.black,
+                              color: ColorsPrime.black,
                             ),
                           ),
                         ),
@@ -83,7 +85,8 @@ class CustomElevatedButtonChannels extends StatelessWidget {
                         Text(
                           DateFormat("hh:mm a")
                               .format(DateTime.parse(channel["fecha"])),
-                          style: TextStyle(fontSize: 10, color: Colors.grey),
+                          style:
+                              TextStyle(fontSize: 10, color: ColorsPrime.greyP),
                         ),
                       ],
                     ),
@@ -97,7 +100,7 @@ class CustomElevatedButtonChannels extends StatelessWidget {
                       style: const TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.normal,
-                        color: Colors.black,
+                        color: ColorsPrime.black,
                       ),
                     ),
                   )

@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:simple_menu/resources/colors/colors_prime.dart';
 import 'package:simple_menu/widgets/add_status_card.dart';
 import 'package:simple_menu/widgets/widgets.dart';
 
@@ -57,7 +58,9 @@ class _StatusScreenState extends State<StatusScreen> {
           child: Text(
             "Novedades",
             style: TextStyle(
-                fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white),
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                color: ColorsPrime.white),
           ),
         ),
         SearchBarCustom(),
@@ -69,7 +72,7 @@ class _StatusScreenState extends State<StatusScreen> {
             style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.normal,
-                color: Colors.white),
+                color: ColorsPrime.white),
           ),
         ),
         //TODO NEWS
@@ -97,7 +100,7 @@ class _StatusScreenState extends State<StatusScreen> {
             style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.normal,
-                color: Colors.white),
+                color: ColorsPrime.white),
           ),
         ),
         Expanded(

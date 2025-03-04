@@ -17,10 +17,10 @@ class CustomButtonCall extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ButtonStyle(
-        shadowColor: WidgetStatePropertyAll(Colors.black),
+        shadowColor: WidgetStatePropertyAll(ColorsPrime.black),
         elevation: WidgetStatePropertyAll(2),
-        overlayColor: WidgetStatePropertyAll(Colors.grey),
-        backgroundColor: WidgetStatePropertyAll(Colors.white),
+        overlayColor: WidgetStatePropertyAll(ColorsPrime.grey),
+        backgroundColor: WidgetStatePropertyAll(ColorsPrime.white),
         minimumSize: WidgetStatePropertyAll(Size(double.infinity, 50)),
         maximumSize: WidgetStatePropertyAll(Size(double.infinity, 60)),
         shape: WidgetStateProperty.all(
@@ -35,7 +35,7 @@ class CustomButtonCall extends StatelessWidget {
         children: [
           CircleAvatar(
             radius: 23,
-            backgroundColor: Colors.grey[300],
+            backgroundColor: ColorsPrime.greyP[300],
             child: ClipOval(
               child: CachedNetworkImage(
                 imageUrl: callInfo['image'],
@@ -60,8 +60,9 @@ class CustomButtonCall extends StatelessWidget {
                     fontWeight: callInfo['type'] != 2
                         ? FontWeight.normal
                         : FontWeight.bold,
-                    color:
-                        callInfo['type'] != 2 ? Colors.black : ColorsPrime.red,
+                    color: callInfo['type'] != 2
+                        ? ColorsPrime.black
+                        : ColorsPrime.red,
                   ),
                 ),
                 dataChange(callInfo['type'])
@@ -78,7 +79,7 @@ class CustomButtonCall extends StatelessWidget {
           ),
           IconButton(
             iconSize: 23,
-            color: Colors.black,
+            color: ColorsPrime.black,
             onPressed: () {},
             icon: Icon(Icons.info_outline_rounded),
           )
