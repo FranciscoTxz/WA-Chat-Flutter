@@ -1,7 +1,7 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:simple_menu/widgets/add_status_card.dart';
 import 'package:simple_menu/widgets/widgets.dart';
 
 class StatusScreen extends StatefulWidget {
@@ -41,6 +41,10 @@ class _StatusScreenState extends State<StatusScreen> {
     print("Se tocó la tarjeta de ${channels[index]["nombre"]}");
   }
 
+  void onButtonPressedUploadImage() {
+    print("Se subiria imagen");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -71,13 +75,17 @@ class _StatusScreenState extends State<StatusScreen> {
         //TODO NEWS
         Expanded(
           child: ListView.builder(
-            scrollDirection: Axis.horizontal, // Cambiar a horizontal
-            itemCount: status.length, // Número de items
+            scrollDirection: Axis.horizontal,
+            itemCount: status.length + 1,
             itemBuilder: (context, index) {
-              return StatusCard(
-                  index: index,
-                  onPressed: () => onButtonPressed(index),
-                  stats: status);
+              return index != 0
+                  ? StatusCard(
+                      index: index - 1,
+                      onPressed: () => onButtonPressed(index - 1),
+                      stats: status)
+                  : AddStatusCard(
+                      onPressed: () => onButtonPressedUploadImage(),
+                    );
             },
           ),
         ),
