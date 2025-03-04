@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:simple_menu/resources/colors/light_and_dark_colors.dart';
 
 import '../resources/colors/colors_prime.dart';
 
@@ -34,14 +35,14 @@ class _AppBarCustomScreenOneState extends State<AppBarCustomScreenOne> {
           IconButton(
             icon: Icon(Icons.more_horiz_rounded),
             iconSize: 30,
-            color: ColorsPrime.white,
+            color: ColorUtil.getWhiteBlack(context),
             onPressed: () {},
           ),
           Spacer(),
           IconButton(
             icon: Icon(Icons.camera_alt),
             iconSize: 30,
-            color: ColorsPrime.white,
+            color: ColorUtil.getWhiteBlack(context),
             onPressed: _openCamera,
           ),
           IconButton(
@@ -52,7 +53,7 @@ class _AppBarCustomScreenOneState extends State<AppBarCustomScreenOne> {
           ),
         ],
       ),
-      backgroundColor: ColorsPrime.backGround,
+      backgroundColor: ColorUtil.getBackGround(context),
     );
   }
 }
@@ -67,13 +68,13 @@ class AppBarCustomScreenTwo extends StatelessWidget
           IconButton(
             icon: Icon(Icons.more_horiz_rounded),
             iconSize: 30,
-            color: ColorsPrime.white,
+            color: ColorUtil.getWhiteBlack(context),
             onPressed: () {},
           ),
           Spacer(),
         ],
       ),
-      backgroundColor: ColorsPrime.backGround,
+      backgroundColor: ColorUtil.getBackGround(context),
     );
   }
 
@@ -91,7 +92,7 @@ class AppBarCustomScreenThree extends StatelessWidget
           IconButton(
             icon: Icon(Icons.more_horiz_rounded),
             iconSize: 30,
-            color: ColorsPrime.white,
+            color: ColorUtil.getWhiteBlack(context),
             onPressed: () {},
           ),
           Spacer(),
@@ -103,7 +104,7 @@ class AppBarCustomScreenThree extends StatelessWidget
           ),
         ],
       ),
-      backgroundColor: ColorsPrime.backGround,
+      backgroundColor: ColorUtil.getBackGround(context),
     );
   }
 

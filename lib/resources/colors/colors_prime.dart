@@ -5,14 +5,16 @@ import 'package:flutter/material.dart';
 abstract final class ColorsPrime {
   /// Completely invisible.
   static const Color white = Color(0xFFFFFFFF);
+  static const Color whiteT = Color(0x4DFFFFFF);
   static const Color grey = Color(0xFF3D3D3D);
   static const Color grey2 = Color(0xFFA4A4A4);
   static const Color red = Color(0xFFf0190a);
   static const Color black = Color(0xFF000000);
+  static const Color blackT = Color(0x4D000000);
 
   // Home Screen
   static const Color selectedItemColor = Color(0xFFf0190a);
-  static const Color backGround = Color(0xFF1C1C1C);
+  static const Color backGround = Color(0xFF0C0C0C);
 
   //Custom Elevated Button
   static const Color notifIcon = Color(0xFFf0190a);

@@ -8,4 +8,28 @@ class ColorUtil {
         ? ColorsPrime.greySearchBar
         : ColorsPrime.white;
   }
+
+  static Color getNavigationBar(BuildContext context) {
+    return Theme.of(context).brightness == Brightness.dark
+        ? ColorsPrime.black
+        : ColorsPrime.white;
+  }
+
+  static Color getWhiteBlack(BuildContext context) {
+    return Theme.of(context).brightness == Brightness.dark
+        ? ColorsPrime.white
+        : ColorsPrime.black;
+  }
+
+  static Color getBlackWhite(BuildContext context) {
+    return Theme.of(context).brightness == Brightness.dark
+        ? ColorsPrime.black
+        : ColorsPrime.white;
+  }
+
+  static Color getBackGround(BuildContext context) {
+    return Theme.of(context).brightness == Brightness.dark
+        ? ColorsPrime.backGround
+        : ColorsPrime.white;
+  }
 }

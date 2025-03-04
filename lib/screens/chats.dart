@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:simple_menu/resources/colors/colors_prime.dart';
+import 'package:simple_menu/resources/colors/light_and_dark_colors.dart';
 import 'package:simple_menu/widgets/widgets.dart';
 
 class ChatScreen extends StatefulWidget {
@@ -47,7 +47,7 @@ class _ChatScreenState extends State<ChatScreen> {
               style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
-                  color: ColorsPrime.white),
+                  color: ColorUtil.getWhiteBlack(context)),
             ),
           ),
           SearchBarCustom(),
