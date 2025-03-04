@@ -1,0 +1,72 @@
+[
+  {
+    "foto": "https://randomwordgenerator.com/img/picture-generator/50e1d0424c5ab10ff3d8992cc12c30771037dbf8525478487c2f79d2934f_640.jpg",
+    "pp": "https://randomuser.me/api/portraits/men/12.jpg",
+    "nombre": "Juan Pérez",
+    "fecha": "2025-02-04T23:02:00Z",
+    "visto": 1
+  },
+  {
+    "foto": "https://randomwordgenerator.com/img/picture-generator/feet-1868670_640.jpg",
+    "pp": "https://randomuser.me/api/portraits/women/23.jpg",
+    "nombre": "María González",
+    "fecha": "2025-02-03T18:45:30Z",
+    "visto": 1
+  },
+  {
+    "foto": "https://randomuser.me/api/portraits/men/31.jpg",
+    "pp": "https://randomuser.me/api/portraits/men/31.jpg",
+    "nombre": "Carlos López",
+    "fecha": "2025-02-02T14:30:15Z",
+    "visto": 1
+  },
+  {
+    "foto": "https://randomwordgenerator.com/img/picture-generator/52e9d44b495bac14f1dc8460962e33791c3ad6e04e507441722978d6944fc3_640.jpg",
+    "pp": "https://randomuser.me/api/portraits/women/42.jpg",
+    "nombre": "Ana Ramírez",
+    "fecha": "2025-02-01T09:15:45Z",
+    "visto": 1
+  },
+  {
+    "foto": "https://randomwordgenerator.com/img/picture-generator/53e0d2474f51ae14f1dc8460962e33791c3ad6e04e50744172277fd7964ec6_640.jpg",
+    "pp": "https://randomuser.me/api/portraits/men/51.jpg",
+    "nombre": "Pedro Castillo",
+    "fecha": "2025-01-31T21:00:10Z",
+    "visto": 1
+  },
+  {
+    "foto": "https://randomwordgenerator.com/img/picture-generator/54e0dd474d51b10ff3d8992cc12c30771037dbf852547940752979d4974f_640.jpg",
+    "pp": "https://randomuser.me/api/portraits/women/26.jpg",
+    "nombre": "Lucía Fernández",
+    "fecha": "2025-01-30T16:20:55Z",
+    "visto": 0
+  },
+  {
+    "foto": "https://randomwordgenerator.com/img/picture-generator/57e8d34b4d57a914f1dc8460962e33791c3ad6e04e507440772872d3924bc4_640.jpg",
+    "pp": "https://randomuser.me/api/portraits/men/57.jpg",
+    "nombre": "Javier Torres",
+    "fecha": "2025-01-29T12:05:20Z",
+    "visto": 0
+  },
+  {
+    "foto": "https://randomwordgenerator.com/img/picture-generator/52e1d1464c57a514f1dc8460962e33791c3ad6e04e50744074267bd6904ac5_640.jpg",
+    "pp": "https://randomuser.me/api/portraits/women/28.jpg",
+    "nombre": "Sofía Méndez",
+    "fecha": "2025-01-28T07:50:40Z",
+    "visto": 0
+  },
+  {
+    "foto": "https://randomwordgenerator.com/img/picture-generator/52e2d64a4851a514f1dc8460962e33791c3ad6e04e507441722978d6944acc_640.jpg",
+    "pp": "https://randomuser.me/api/portraits/men/79.jpg",
+    "nombre": "Miguel Rojas",
+    "fecha": "2025-01-27T03:35:10Z",
+    "visto": 0
+  },
+  {
+    "foto": "https://randomwordgenerator.com/img/picture-generator/57e0d6434d5baa14f1dc8460962e33791c3ad6e04e5074417d2e7ed7974bc4_640.jpg",
+    "pp": "https://randomuser.me/api/portraits/women/10.jpg",
+    "nombre": "Elena Vargas",
+    "fecha": "2025-01-26T00:10:05Z",
+    "visto": 0
+  }
+]
