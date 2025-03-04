@@ -39,11 +39,15 @@ abstract final class ColorsPrime {
   static const int _greyPrimaryValue = 0xFF9E9E9E;
 
   //Search Bar
-  static const Color greySearchBar = Color(0xFF252525);
+  static const Color greySearchBar = Color(0xFF1A1A1A);
   static const Color greySearchBarText = Color(0xFF818181);
 
   // Status Card
   static const Color redStatus = Color(0xB2FF0000);
   static const Color greyStatus = Color(0xB23D3D3D);
+  static const Color whiteStatus = Color(0xB2CBC9C9);
   static const Color blackShadow = Color(0xB2000000);
+
+  //Extra colors
+  static const Color greyBackGroundButtons = Color(0xFF1A1A1A);
 }

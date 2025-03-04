@@ -21,7 +21,7 @@ Row dataChange(int type) {
               style: const TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.normal,
-                color: ColorsPrime.grey,
+                color: ColorsPrime.grey2,
               ),
             ),
           ),
@@ -43,7 +43,7 @@ Row dataChange(int type) {
               style: const TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.normal,
-                color: ColorsPrime.grey,
+                color: ColorsPrime.grey2,
               ),
             ),
           ),
@@ -65,7 +65,7 @@ Row dataChange(int type) {
               style: const TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.normal,
-                color: ColorsPrime.grey,
+                color: ColorsPrime.grey2,
               ),
             ),
           ),
@@ -87,7 +87,7 @@ Row dataChange(int type) {
               style: const TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.normal,
-                color: ColorsPrime.grey,
+                color: ColorsPrime.grey2,
               ),
             ),
           ),

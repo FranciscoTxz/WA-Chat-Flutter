@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simple_menu/resources/colors/colors_prime.dart';
+import 'package:simple_menu/resources/colors/light_and_dark_colors.dart';
 
 class AddStatusCard extends StatelessWidget {
   AddStatusCard({super.key, required this.onPressed});
@@ -13,7 +14,7 @@ class AddStatusCard extends StatelessWidget {
       child: GestureDetector(
         onTap: onPressed,
         child: Card(
-          color: ColorsPrime.greyStatus,
+          color: ColorUtil.getBackGroungCard(context),
           elevation: 5,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),

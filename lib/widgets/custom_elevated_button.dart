@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:simple_menu/resources/colors/colors_prime.dart';
+import 'package:simple_menu/resources/colors/light_and_dark_colors.dart';
 import 'package:simple_menu/resources/functions/correct_text.dart';
 
 class CustomElevatedButton extends StatelessWidget {
@@ -18,7 +19,8 @@ class CustomElevatedButton extends StatelessWidget {
         shadowColor: WidgetStatePropertyAll(ColorsPrime.black),
         elevation: WidgetStatePropertyAll(2),
         overlayColor: WidgetStatePropertyAll(ColorsPrime.greyP),
-        backgroundColor: WidgetStatePropertyAll(ColorsPrime.white),
+        backgroundColor:
+            WidgetStatePropertyAll(ColorUtil.getBackGroundButtons(context)),
         minimumSize: WidgetStatePropertyAll(Size(double.infinity, 50)),
         maximumSize: WidgetStatePropertyAll(Size(double.infinity, 75)),
         shape: WidgetStateProperty.all(
@@ -61,19 +63,19 @@ class CustomElevatedButton extends StatelessWidget {
                 Text(
                   corregir(chats['name']),
                   overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 16,
-                    color: ColorsPrime.black,
+                    color: ColorUtil.getWhiteBlack(context),
                   ),
                 ),
                 Text(
                   corregir(chats['messages'][chats['messages'].length - 1]
                       ['message']),
                   overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.normal,
-                    color: ColorsPrime.black,
+                    color: ColorUtil.getWhiteBlack(context),
                   ),
                 )
               ],
@@ -87,7 +89,9 @@ class CustomElevatedButton extends StatelessWidget {
                 child: Text(
                   DateFormat("hh:mm a").format(DateTime.parse(chats['messages']
                       [chats['messages'].length - 1]['timestamp'])),
-                  style: TextStyle(fontSize: 10, color: ColorsPrime.grey),
+                  style: TextStyle(
+                      fontSize: 10,
+                      color: ColorUtil.getDateTextButtons(context)),
                 ),
               ),
               Visibility(

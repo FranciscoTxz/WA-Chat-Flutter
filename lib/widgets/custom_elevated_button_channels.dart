@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:simple_menu/resources/functions/correct_text.dart';
 
 import '../resources/colors/colors_prime.dart';
+import '../resources/colors/light_and_dark_colors.dart';
 
 class CustomElevatedButtonChannels extends StatelessWidget {
   const CustomElevatedButtonChannels(
@@ -25,7 +26,8 @@ class CustomElevatedButtonChannels extends StatelessWidget {
           shadowColor: WidgetStatePropertyAll(ColorsPrime.black),
           elevation: WidgetStatePropertyAll(2),
           overlayColor: WidgetStatePropertyAll(ColorsPrime.greyP),
-          backgroundColor: WidgetStatePropertyAll(ColorsPrime.white),
+          backgroundColor:
+              WidgetStatePropertyAll(ColorUtil.getBackGroundButtons(context)),
           minimumSize: WidgetStatePropertyAll(Size(double.infinity, 80)),
           maximumSize: WidgetStatePropertyAll(Size(double.infinity, 85)),
           shape: WidgetStateProperty.all(
@@ -75,9 +77,9 @@ class CustomElevatedButtonChannels extends StatelessWidget {
                           child: Text(
                             corregir(channel['nombre']),
                             overflow: TextOverflow.ellipsis,
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 16,
-                              color: ColorsPrime.black,
+                              color: ColorUtil.getWhiteBlack(context),
                             ),
                           ),
                         ),
@@ -85,8 +87,9 @@ class CustomElevatedButtonChannels extends StatelessWidget {
                         Text(
                           DateFormat("hh:mm a")
                               .format(DateTime.parse(channel["fecha"])),
-                          style:
-                              TextStyle(fontSize: 10, color: ColorsPrime.greyP),
+                          style: TextStyle(
+                              fontSize: 10,
+                              color: ColorUtil.getDateTextButtons(context)),
                         ),
                       ],
                     ),
@@ -97,10 +100,10 @@ class CustomElevatedButtonChannels extends StatelessWidget {
                       maxLines: 2,
                       channel['ultimo_mensaje'],
                       overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.normal,
-                        color: ColorsPrime.black,
+                        color: ColorUtil.getWhiteBlack(context),
                       ),
                     ),
                   )

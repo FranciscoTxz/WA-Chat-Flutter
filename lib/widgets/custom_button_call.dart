@@ -5,6 +5,8 @@ import 'package:simple_menu/resources/colors/colors_prime.dart';
 import 'package:simple_menu/resources/functions/row_button_call.dart';
 import 'package:simple_menu/resources/functions/correct_text.dart';
 
+import '../resources/colors/light_and_dark_colors.dart';
+
 class CustomButtonCall extends StatelessWidget {
   const CustomButtonCall(
       {super.key, required this.callInfo, required this.onPressed});
@@ -20,7 +22,8 @@ class CustomButtonCall extends StatelessWidget {
         shadowColor: WidgetStatePropertyAll(ColorsPrime.black),
         elevation: WidgetStatePropertyAll(2),
         overlayColor: WidgetStatePropertyAll(ColorsPrime.grey),
-        backgroundColor: WidgetStatePropertyAll(ColorsPrime.white),
+        backgroundColor:
+            WidgetStatePropertyAll(ColorUtil.getBackGroundButtons(context)),
         minimumSize: WidgetStatePropertyAll(Size(double.infinity, 50)),
         maximumSize: WidgetStatePropertyAll(Size(double.infinity, 60)),
         shape: WidgetStateProperty.all(
@@ -61,7 +64,7 @@ class CustomButtonCall extends StatelessWidget {
                         ? FontWeight.normal
                         : FontWeight.bold,
                     color: callInfo['type'] != 2
-                        ? ColorsPrime.black
+                        ? ColorUtil.getWhiteBlack(context)
                         : ColorsPrime.red,
                   ),
                 ),
@@ -74,12 +77,13 @@ class CustomButtonCall extends StatelessWidget {
             padding: const EdgeInsets.only(right: 3.0),
             child: Text(
               DateFormat("hh:mm a").format(DateTime.parse(callInfo['date'])),
-              style: TextStyle(fontSize: 10, color: ColorsPrime.grey),
+              style: TextStyle(
+                  fontSize: 10, color: ColorUtil.getDateTextButtons(context)),
             ),
           ),
           IconButton(
             iconSize: 23,
-            color: ColorsPrime.black,
+            color: ColorUtil.getWhiteBlack(context),
             onPressed: () {},
             icon: Icon(Icons.info_outline_rounded),
           )

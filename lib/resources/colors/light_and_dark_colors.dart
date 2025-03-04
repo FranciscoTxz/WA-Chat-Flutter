@@ -32,4 +32,28 @@ class ColorUtil {
         ? ColorsPrime.backGround
         : ColorsPrime.white;
   }
+
+  static Color getBackGroundButtons(BuildContext context) {
+    return Theme.of(context).brightness == Brightness.dark
+        ? ColorsPrime.greyBackGroundButtons
+        : ColorsPrime.white;
+  }
+
+  static Color getDateTextButtons(BuildContext context) {
+    return Theme.of(context).brightness == Brightness.dark
+        ? ColorsPrime.white
+        : ColorsPrime.grey;
+  }
+
+  static Color getBackGroungCard(BuildContext context) {
+    return Theme.of(context).brightness == Brightness.dark
+        ? ColorsPrime.greyStatus
+        : ColorsPrime.whiteStatus;
+  }
+
+  static Color getColorStatusCall(BuildContext context) {
+    return Theme.of(context).brightness == Brightness.dark
+        ? ColorsPrime.greyStatus
+        : ColorsPrime.grey;
+  }
 }

@@ -13,6 +13,7 @@ class SearchBarCustom extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 12.0, right: 12.0, bottom: 12.0),
       child: SearchBar(
+        elevation: WidgetStateProperty.all(3),
         trailing: <Widget>[
           Tooltip(
             message: 'Change brightness mode',
@@ -22,8 +23,14 @@ class SearchBarCustom extends StatelessWidget {
                 Provider.of<ThemeProvider>(context, listen: false)
                     .toggleDarkMode();
               },
-              icon: const Icon(Icons.wb_sunny_outlined),
-              selectedIcon: const Icon(Icons.brightness_2_outlined),
+              icon: const Icon(
+                Icons.wb_sunny_outlined,
+                color: ColorsPrime.greySearchBarText,
+              ),
+              selectedIcon: const Icon(
+                Icons.brightness_2_outlined,
+                color: ColorsPrime.greySearchBarText,
+              ),
             ),
           ),
         ],
@@ -45,7 +52,7 @@ class SearchBarCustom extends StatelessWidget {
         backgroundColor:
             WidgetStateProperty.all(ColorUtil.getSearchBarColor(context)),
         textStyle: WidgetStateProperty.all(
-            TextStyle(fontSize: 16, color: ColorsPrime.white)),
+            TextStyle(fontSize: 16, color: ColorUtil.getWhiteBlack(context))),
         shape: WidgetStateProperty.all(
           RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         ),
