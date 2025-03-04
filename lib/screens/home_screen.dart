@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:simple_menu/resources/colors/colors_prime.dart';
+import 'package:simple_menu/resources/themes/theme_provider.dart';
 import 'package:simple_menu/screens/screens.dart';
 import 'package:simple_menu/widgets/widgets.dart';
+import 'package:provider/provider.dart';
+
+import '../resources/themes/theme_data.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -47,23 +51,28 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: ColorsPrime.backGround,
-      appBar: _getAppBar(_selectedIndex),
-      body: _getScreen(_selectedIndex),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-        selectedItemColor: ColorsPrime.selectedItemColor,
-        unselectedItemColor: ColorsPrime.white,
-        backgroundColor: ColorsPrime.black,
-        type: BottomNavigationBarType.fixed,
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'Chats'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.newspaper_rounded), label: 'Novedades'),
-          BottomNavigationBarItem(icon: Icon(Icons.call), label: 'Llamadas'),
-        ],
+    final themeProvider = Provider.of<ThemeProvider>(context);
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: themeProvider.isDarkMode ? darkTheme : lightTheme,
+      home: Scaffold(
+        backgroundColor: ColorsPrime.backGround,
+        appBar: _getAppBar(_selectedIndex),
+        body: _getScreen(_selectedIndex),
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _selectedIndex,
+          onTap: _onItemTapped,
+          selectedItemColor: ColorsPrime.selectedItemColor,
+          unselectedItemColor: ColorsPrime.white,
+          backgroundColor: ColorsPrime.black,
+          type: BottomNavigationBarType.fixed,
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'Chats'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.newspaper_rounded), label: 'Novedades'),
+            BottomNavigationBarItem(icon: Icon(Icons.call), label: 'Llamadas'),
+          ],
+        ),
       ),
     );
   }
