@@ -30,6 +30,7 @@ class _AppBarCustomScreenOneState extends State<AppBarCustomScreenOne> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      surfaceTintColor: ColorUtil.getBackGround(context),
       title: Row(
         children: [
           IconButton(
@@ -63,6 +64,7 @@ class AppBarCustomScreenTwo extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      surfaceTintColor: ColorUtil.getBackGround(context),
       title: Row(
         children: [
           IconButton(
@@ -87,6 +89,7 @@ class AppBarCustomScreenThree extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      surfaceTintColor: ColorUtil.getBackGround(context),
       title: Row(
         children: [
           IconButton(
