@@ -42,7 +42,7 @@ class CustomElevatedButtonChannels extends StatelessWidget {
           children: [
             //PP
             CircleAvatar(
-              radius: 33,
+              radius: 30,
               backgroundColor: ColorsPrime.greyP[300],
               child: ClipOval(
                 child: AspectRatio(
@@ -62,13 +62,13 @@ class CustomElevatedButtonChannels extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 10.0, right: 8.0),
+              padding: const EdgeInsets.only(left: 5.0, right: 5.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
-                    width: 250,
+                    width: 220,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -95,7 +95,7 @@ class CustomElevatedButtonChannels extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 250,
+                    width: 230,
                     child: Text(
                       maxLines: 2,
                       channel['ultimo_mensaje'],
