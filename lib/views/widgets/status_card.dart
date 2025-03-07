@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:simple_menu/models/channels_model.dart';
 import 'package:simple_menu/models/status_model.dart';
 import 'package:simple_menu/resources/colors/colors_prime.dart';
 

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:simple_menu/models/call_model.dart';
 import 'package:simple_menu/resources/colors/colors_prime.dart';
-import 'package:simple_menu/resources/functions/row_button_call.dart';
+import 'package:simple_menu/views/widgets/widgets.dart';
 import 'package:simple_menu/resources/functions/correct_text.dart';
 import '../../resources/colors/light_and_dark_colors.dart';
 

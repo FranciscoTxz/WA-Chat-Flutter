@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../colors/colors_prime.dart';
+import '../../resources/colors/colors_prime.dart';
 
 Row dataChange(int type) {
   switch (type) {
