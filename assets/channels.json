@@ -1,33 +1,33 @@
 [
     {
       "nombre": "TechNova Solutions",
-      "imagen_grupo": "https://img.freepik.com/free-psd/gradient-abstract-logo_23-2150689652.jpg",
-      "ultimo_mensaje": "Nuestro equipo ha actualizado el sistema.",
-      "fecha": "2025-03-04T10:30:00Z"
+      "group_image": "https://img.freepik.com/free-psd/gradient-abstract-logo_23-2150689652.jpg",
+      "last_message": "Nuestro equipo ha actualizado el sistema.",
+      "date": "2025-03-04T10:30:00Z"
     },
     {
       "nombre": "Cybernetic Innovations",
-      "imagen_grupo": "https://mir-s3-cdn-cf.behance.net/project_modules/hd/e4c02d32431337.5605bf79cdb42.jpg",
-      "ultimo_mensaje": "Hemos lanzado una nueva versión del software.",
-      "fecha": "2025-03-04T09:15:00Z"
+      "group_image": "https://mir-s3-cdn-cf.behance.net/project_modules/hd/e4c02d32431337.5605bf79cdb42.jpg",
+      "last_message": "Hemos lanzado una nueva versión del software.",
+      "date": "2025-03-04T09:15:00Z"
     },
     {
       "nombre": "Quantum Enterprises",
-      "imagen_grupo": "https://www.creativefabrica.com/wp-content/uploads/2021/08/22/Random-circle-logo-like-a-maze-Graphics-16173883-1.jpg",
-      "ultimo_mensaje": "Próxima reunión programada para el viernes.",
-      "fecha": "2025-03-03T17:45:00Z"
+      "group_image": "https://www.creativefabrica.com/wp-content/uploads/2021/08/22/Random-circle-logo-like-a-maze-Graphics-16173883-1.jpg",
+      "last_message": "Próxima reunión programada para el viernes.",
+      "date": "2025-03-03T17:45:00Z"
     },
     {
       "nombre": "NeuralTech Systems",
-      "imagen_grupo": "https://i.pinimg.com/736x/f9/6a/26/f96a261e5a60d7d66b36e2850e3eb19b.jpg",
-      "ultimo_mensaje": "Se requiere mantenimiento en los servidores.",
-      "fecha": "2025-03-03T15:20:00Z"
+      "group_image": "https://i.pinimg.com/736x/f9/6a/26/f96a261e5a60d7d66b36e2850e3eb19b.jpg",
+      "last_message": "Se requiere mantenimiento en los servidores.",
+      "date": "2025-03-03T15:20:00Z"
     },
     {
       "nombre": "BlueWave Networks",
-      "imagen_grupo": "https://cdnb.artstation.com/p/assets/images/images/055/228/903/large/chadrixy-randomlogo2.jpg",
-      "ultimo_mensaje": "El nuevo protocolo de seguridad ya está implementado.",
-      "fecha": "2025-03-02T08:10:00Z"
+      "group_image": "https://cdnb.artstation.com/p/assets/images/images/055/228/903/large/chadrixy-randomlogo2.jpg",
+      "last_message": "El nuevo protocolo de seguridad ya está implementado.",
+      "date": "2025-03-02T08:10:00Z"
     }
   ]
   

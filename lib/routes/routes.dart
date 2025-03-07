@@ -1,5 +1,5 @@
-import 'package:simple_menu/screens/home_screen.dart';
-import 'package:simple_menu/screens/screens.dart';
+import 'package:simple_menu/views/screens/home_screen.dart';
+import 'package:simple_menu/views/screens/screens.dart';
 import 'package:go_router/go_router.dart';
 
 final appRouter = GoRouter(routes: [

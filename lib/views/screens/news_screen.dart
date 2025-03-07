@@ -1,10 +1,11 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
 import 'package:simple_menu/resources/colors/colors_prime.dart';
 import 'package:simple_menu/resources/colors/light_and_dark_colors.dart';
-import 'package:simple_menu/widgets/add_status_card.dart';
-import 'package:simple_menu/widgets/widgets.dart';
+import 'package:simple_menu/viewmodel/channels_view_model.dart';
+import 'package:simple_menu/views/widgets/widgets.dart';
 
 class StatusScreen extends StatefulWidget {
   const StatusScreen({super.key});
@@ -14,25 +15,10 @@ class StatusScreen extends StatefulWidget {
 }
 
 class _StatusScreenState extends State<StatusScreen> {
-  late List<dynamic> status = [];
-  late List<dynamic> channels = [];
-
   @override
   void initState() {
     super.initState();
-    loadJsons();
-  }
-
-  Future<void> loadJsons() async {
-    String jsonString = await rootBundle.loadString('assets/status_info.json');
-    String jsonStringChannels =
-        await rootBundle.loadString('assets/channels.json');
-    final List<dynamic> jsonData = json.decode(jsonString);
-    final List<dynamic> jsonDataChannels = json.decode(jsonStringChannels);
-    setState(() {
-      status = jsonData;
-      channels = jsonDataChannels;
-    });
+    Provider.of<ChannelsViewModel>(context, listen: false).loadChannels();
   }
 
   void onButtonPressed(int index) {
@@ -49,6 +35,8 @@ class _StatusScreenState extends State<StatusScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final channelsVM = Provider.of<ChannelsViewModel>(context);
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -79,20 +67,22 @@ class _StatusScreenState extends State<StatusScreen> {
         ),
         //TODO NEWS
         Expanded(
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: status.length + 1,
-            itemBuilder: (context, index) {
-              return index != 0
-                  ? StatusCard(
-                      index: index - 1,
-                      onPressed: () => onButtonPressed(index - 1),
-                      stats: status)
-                  : AddStatusCard(
-                      onPressed: () => onButtonPressedUploadImage(),
-                    );
-            },
-          ),
+          child: channelsVM.channels.isEmpty
+              ? Center(child: CircularProgressIndicator())
+              : ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: channelsVM.channels.length + 1,
+                  itemBuilder: (context, index) {
+                    return index != 0
+                        ? StatusCard(
+                            index: index - 1,
+                            onPressed: () => onButtonPressed(index - 1),
+                            stats: channelsVM.channels[index])
+                        : AddStatusCard(
+                            onPressed: () => onButtonPressedUploadImage(),
+                          );
+                  },
+                ),
         ),
         Padding(
           padding: const EdgeInsets.only(

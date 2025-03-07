@@ -1,17 +1,17 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:simple_menu/models/call_model.dart';
 import 'package:simple_menu/resources/colors/colors_prime.dart';
 import 'package:simple_menu/resources/functions/row_button_call.dart';
 import 'package:simple_menu/resources/functions/correct_text.dart';
-
-import '../resources/colors/light_and_dark_colors.dart';
+import '../../resources/colors/light_and_dark_colors.dart';
 
 class CustomButtonCall extends StatelessWidget {
   const CustomButtonCall(
       {super.key, required this.callInfo, required this.onPressed});
 
-  final Map<String, dynamic> callInfo;
+  final CallModel callInfo;
 
   final VoidCallback onPressed;
 
@@ -41,7 +41,7 @@ class CustomButtonCall extends StatelessWidget {
             backgroundColor: ColorsPrime.greyP[300],
             child: ClipOval(
               child: CachedNetworkImage(
-                imageUrl: callInfo['image'],
+                imageUrl: callInfo.image,
                 placeholder: (context, url) => CircularProgressIndicator(),
                 errorWidget: (context, url, error) =>
                     Icon(Icons.error, color: ColorsPrime.red),
@@ -56,19 +56,19 @@ class CustomButtonCall extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  corregir(callInfo['name']),
+                  corregir(callInfo.name),
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontSize: 16,
-                    fontWeight: callInfo['type'] != 2
+                    fontWeight: callInfo.type != 2
                         ? FontWeight.normal
                         : FontWeight.bold,
-                    color: callInfo['type'] != 2
+                    color: callInfo.type != 2
                         ? ColorUtil.getWhiteBlack(context)
                         : ColorsPrime.red,
                   ),
                 ),
-                dataChange(callInfo['type'])
+                dataChange(callInfo.type)
               ],
             ),
           ),
@@ -76,7 +76,7 @@ class CustomButtonCall extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 3.0),
             child: Text(
-              DateFormat("hh:mm a").format(DateTime.parse(callInfo['date'])),
+              DateFormat("hh:mm a").format(DateTime.parse(callInfo.date)),
               style: TextStyle(
                   fontSize: 10, color: ColorUtil.getDateTextButtons(context)),
             ),

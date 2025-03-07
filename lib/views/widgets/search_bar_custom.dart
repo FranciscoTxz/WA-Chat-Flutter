@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:simple_menu/resources/colors/light_and_dark_colors.dart';
-import 'package:simple_menu/resources/themes/theme_provider.dart';
+import 'package:simple_menu/viewmodel/theme_provider.dart';
 
-import '../resources/colors/colors_prime.dart';
+import '../../resources/colors/colors_prime.dart';
 
 class SearchBarCustom extends StatelessWidget {
   const SearchBarCustom({super.key});
@@ -18,9 +18,10 @@ class SearchBarCustom extends StatelessWidget {
           Tooltip(
             message: 'Change brightness mode',
             child: IconButton(
-              isSelected: Provider.of<ThemeProvider>(context).isDarkMode,
+              isSelected:
+                  Provider.of<ThemeProviderViewModel>(context).isDarkMode,
               onPressed: () {
-                Provider.of<ThemeProvider>(context, listen: false)
+                Provider.of<ThemeProviderViewModel>(context, listen: false)
                     .toggleDarkMode();
               },
               icon: const Icon(

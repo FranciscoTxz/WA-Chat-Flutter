@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:simple_menu/resources/functions/correct_text.dart';
 
-import '../resources/colors/colors_prime.dart';
-import '../resources/colors/light_and_dark_colors.dart';
+import '../../resources/colors/colors_prime.dart';
+import '../../resources/colors/light_and_dark_colors.dart';
 
 class CustomElevatedButtonChannels extends StatelessWidget {
   const CustomElevatedButtonChannels(

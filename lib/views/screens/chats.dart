@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:simple_menu/resources/colors/light_and_dark_colors.dart';
-import 'package:simple_menu/widgets/widgets.dart';
+import 'package:simple_menu/views/widgets/widgets.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});

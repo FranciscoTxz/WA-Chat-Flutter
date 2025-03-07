@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:simple_menu/resources/colors/colors_prime.dart';
 import 'package:simple_menu/resources/colors/light_and_dark_colors.dart';
-import 'package:simple_menu/screens/screens.dart';
-import 'package:simple_menu/widgets/widgets.dart';
+import 'package:simple_menu/views/screens/screens.dart';
+import 'package:simple_menu/views/widgets/widgets.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

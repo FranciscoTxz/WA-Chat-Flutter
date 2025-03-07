@@ -4,3 +4,4 @@ export 'appbar_custom.dart';
 export 'search_bar_custom.dart';
 export 'status_card.dart';
 export 'custom_elevated_button_channels.dart';
+export 'add_status_card.dart';

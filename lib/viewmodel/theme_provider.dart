@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ThemeProvider extends ChangeNotifier {
+class ThemeProviderViewModel extends ChangeNotifier {
   bool isDarkMode = false;
 
   void toggleDarkMode() {

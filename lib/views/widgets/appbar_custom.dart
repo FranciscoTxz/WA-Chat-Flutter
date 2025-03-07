@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:simple_menu/resources/colors/light_and_dark_colors.dart';
 
-import '../resources/colors/colors_prime.dart';
+import '../../resources/colors/colors_prime.dart';
 
 class AppBarCustomScreenOne extends StatefulWidget
     implements PreferredSizeWidget {
