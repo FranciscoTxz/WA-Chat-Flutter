@@ -58,7 +58,6 @@ class _StatusScreenState extends State<StatusScreen> {
             ),
           ),
         ),
-        SearchBarCustom(),
         Padding(
           padding: const EdgeInsets.only(
               left: 12.0, top: 4.0, right: 12.0, bottom: 12.0),
