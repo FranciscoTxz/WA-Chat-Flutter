@@ -1,8 +1,8 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
+import 'package:simple_menu/models/chats_model.dart';
 import 'package:simple_menu/resources/colors/light_and_dark_colors.dart';
+import 'package:simple_menu/viewmodel/chats_view_model.dart';
 import 'package:simple_menu/views/widgets/widgets.dart';
 
 class ChatScreen extends StatefulWidget {
@@ -13,27 +13,18 @@ class ChatScreen extends StatefulWidget {
 }
 
 class _ChatScreenState extends State<ChatScreen> {
-  List<dynamic> chats = [];
-
   void initState() {
     super.initState();
-    loadJson();
+    Provider.of<ChatsViewModel>(context, listen: false).loadChats();
   }
 
-  Future<void> loadJson() async {
-    String jsonString = await rootBundle.loadString('assets/new_info.json');
-    final List<dynamic> jsonData = json.decode(jsonString);
-    setState(() {
-      chats = jsonData;
-    });
-  }
-
-  void onButtonPressed(int index) {
-    print(chats[index]['name']);
+  void onButtonPressed(ChatsModel chat) {
+    print(chat.name);
   }
 
   @override
   Widget build(BuildContext context) {
+    final chatsVM = Provider.of<ChatsViewModel>(context);
     return SingleChildScrollView(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -53,13 +44,13 @@ class _ChatScreenState extends State<ChatScreen> {
           SearchBarCustom(),
           Column(
             children: List.generate(
-              chats.length,
+              chatsVM.chats.length,
               (index) => Padding(
                 padding: const EdgeInsets.only(
                     left: 5, right: 5, top: 3.0, bottom: 3.0),
                 child: CustomElevatedButton(
-                  chats: chats[index],
-                  onPressed: () => onButtonPressed(index),
+                  chats: chatsVM.chats[index],
+                  onPressed: () => onButtonPressed(chatsVM.chats[index]),
                 ),
               ),
             ),

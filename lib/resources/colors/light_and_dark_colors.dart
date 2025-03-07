@@ -36,7 +36,7 @@ class ColorUtil {
   static Color getBackGroundButtons(BuildContext context) {
     return Theme.of(context).brightness == Brightness.dark
         ? ColorsPrime.greyBackGroundButtons
-        : ColorsPrime.white;
+        : ColorsPrime.greySearchBarBack;
   }
 
   static Color getDateTextButtons(BuildContext context) {

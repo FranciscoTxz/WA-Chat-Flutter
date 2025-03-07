@@ -29,36 +29,36 @@ class _CallsScreenState extends State<CallsScreen> {
   Widget build(BuildContext context) {
     final callVM = Provider.of<CallViewModel>(context);
 
-    return callVM.calls.isEmpty
-        ? Center(child: CircularProgressIndicator())
-        : SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(
-                      left: 12.0, top: 0.0, right: 12.0, bottom: 12.0),
-                  child: Text(
-                    "Llamadas",
-                    style: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
-                        color: ColorUtil.getWhiteBlack(context)),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(
-                      left: 12.0, top: 0.0, right: 12.0, bottom: 12.0),
-                  child: Text(
-                    "Recientes",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: ColorUtil.getWhiteBlack(context),
-                    ),
-                  ),
-                ),
-                Column(
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(
+                left: 12.0, top: 0.0, right: 12.0, bottom: 12.0),
+            child: Text(
+              "Llamadas",
+              style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: ColorUtil.getWhiteBlack(context)),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+                left: 12.0, top: 0.0, right: 12.0, bottom: 12.0),
+            child: Text(
+              "Recientes",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: ColorUtil.getWhiteBlack(context),
+              ),
+            ),
+          ),
+          callVM.calls.isEmpty
+              ? Center(child: CircularProgressIndicator())
+              : Column(
                   children: List.generate(
                     callVM.calls.length,
                     (index) => Padding(
@@ -71,8 +71,8 @@ class _CallsScreenState extends State<CallsScreen> {
                     ),
                   ),
                 ),
-              ],
-            ),
-          );
+        ],
+      ),
+    );
   }
 }

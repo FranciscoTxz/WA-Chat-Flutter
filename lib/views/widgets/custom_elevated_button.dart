@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:simple_menu/models/chats_model.dart';
 import 'package:simple_menu/resources/colors/colors_prime.dart';
 import 'package:simple_menu/resources/colors/light_and_dark_colors.dart';
 import 'package:simple_menu/resources/functions/correct_text.dart';
@@ -9,7 +10,7 @@ class CustomElevatedButton extends StatelessWidget {
   const CustomElevatedButton(
       {super.key, required this.chats, required this.onPressed});
 
-  final Map<String, dynamic> chats;
+  final ChatsModel chats;
 
   final VoidCallback onPressed;
   @override
@@ -41,7 +42,7 @@ class CustomElevatedButton extends StatelessWidget {
               child: AspectRatio(
                 aspectRatio: 1,
                 child: CachedNetworkImage(
-                  imageUrl: chats["profile_image"],
+                  imageUrl: chats.profileImage,
                   placeholder: (context, url) => SizedBox(
                     width: double.infinity,
                     height: double.infinity,
@@ -61,7 +62,7 @@ class CustomElevatedButton extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  corregir(chats['name']),
+                  corregir(chats.name),
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontSize: 16,
@@ -69,8 +70,7 @@ class CustomElevatedButton extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  corregir(chats['messages'][chats['messages'].length - 1]
-                      ['message']),
+                  corregir(chats.messages[chats.messages.length - 1].message),
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontSize: 12,
@@ -87,17 +87,17 @@ class CustomElevatedButton extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 8.0),
                 child: Text(
-                  DateFormat("hh:mm a").format(DateTime.parse(chats['messages']
-                      [chats['messages'].length - 1]['timestamp'])),
+                  DateFormat("hh:mm a").format(
+                    DateTime.parse(
+                        chats.messages[chats.messages.length - 1].timestamp),
+                  ),
                   style: TextStyle(
                       fontSize: 10,
                       color: ColorUtil.getDateTextButtons(context)),
                 ),
               ),
               Visibility(
-                visible: chats['messages'][chats['messages'].length - 1]
-                            ['sent_by'] ==
-                        0
+                visible: chats.messages[chats.messages.length - 1].sentBy == 0
                     ? true
                     : false,
                 child: Padding(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:simple_menu/resources/themes/theme_data.dart';
 import 'package:simple_menu/viewmodel/call_view_model.dart';
 import 'package:simple_menu/viewmodel/channels_view_model.dart';
+import 'package:simple_menu/viewmodel/chats_view_model.dart';
 import 'package:simple_menu/viewmodel/status_card_view_model.dart';
 import 'package:simple_menu/viewmodel/theme_provider.dart';
 import 'package:simple_menu/routes/routes.dart';
@@ -22,6 +23,9 @@ void main() {
         ),
         ChangeNotifierProvider(
           create: (_) => StatusViewModel(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => ChatsViewModel(),
         ),
       ],
       child: MyApp(),
