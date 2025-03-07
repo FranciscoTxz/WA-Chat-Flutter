@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simple_menu/resources/themes/theme_data.dart';
+import 'package:simple_menu/viewmodel/app_bar_view_model.dart';
 import 'package:simple_menu/viewmodel/call_view_model.dart';
 import 'package:simple_menu/viewmodel/channels_view_model.dart';
 import 'package:simple_menu/viewmodel/chats_view_model.dart';
@@ -27,6 +28,9 @@ void main() {
         ChangeNotifierProvider(
           create: (_) => ChatsViewModel(),
         ),
+        ChangeNotifierProvider(
+          create: (_) => AppBarViewModel(),
+        )
       ],
       child: MyApp(),
     ),

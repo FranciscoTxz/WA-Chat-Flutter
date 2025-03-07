@@ -30,13 +30,19 @@ class _HomeScreenState extends State<HomeScreen> {
   PreferredSizeWidget _getAppBar(int index) {
     switch (index) {
       case 0:
-        return AppBarCustomScreenOne();
+        return AppBarCustom(menuIndex: 0);
       case 1:
-        return AppBarCustomScreenTwo();
+        return AppBarCustom(
+          menuIndex: 1,
+        );
       case 2:
-        return AppBarCustomScreenThree();
+        return AppBarCustom(
+          menuIndex: 2,
+        );
       default:
-        return AppBarCustomScreenOne();
+        return AppBarCustom(
+          menuIndex: 0,
+        );
     }
   }
 
