@@ -6,7 +6,7 @@ class ColorUtil {
   static Color getSearchBarColor(BuildContext context) {
     return Theme.of(context).brightness == Brightness.dark
         ? ColorsPrime.greySearchBar
-        : ColorsPrime.white;
+        : ColorsPrime.greySearchBarBack;
   }
 
   static Color getNavigationBar(BuildContext context) {

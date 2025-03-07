@@ -13,7 +13,7 @@ class CallModel {
   factory CallModel.fromJson(Map<String, dynamic> json) {
     return CallModel(
       name: json['name'] ?? '',
-      type: json['type'] ?? '',
+      type: json['type'] ?? 0,
       image: json['image'] ?? '',
       date: json['date'] ?? '',
     );

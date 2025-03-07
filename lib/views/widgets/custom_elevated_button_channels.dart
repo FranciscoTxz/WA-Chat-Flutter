@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:simple_menu/models/channels_model.dart';
 import 'package:simple_menu/resources/functions/correct_text.dart';
 
 import '../../resources/colors/colors_prime.dart';
@@ -13,7 +14,7 @@ class CustomElevatedButtonChannels extends StatelessWidget {
       required this.channel,
       required this.onPressed});
 
-  final Map<String, dynamic> channel;
+  final ChannelsModel channel;
   final VoidCallback onPressed;
   final int index;
 
@@ -48,7 +49,7 @@ class CustomElevatedButtonChannels extends StatelessWidget {
                 child: AspectRatio(
                   aspectRatio: 1,
                   child: CachedNetworkImage(
-                    imageUrl: channel['imagen_grupo'],
+                    imageUrl: channel.groupImage,
                     placeholder: (context, url) => SizedBox(
                       width: double.infinity,
                       height: double.infinity,
@@ -75,7 +76,7 @@ class CustomElevatedButtonChannels extends StatelessWidget {
                         SizedBox(
                           width: 160,
                           child: Text(
-                            corregir(channel['nombre']),
+                            corregir(channel.name),
                             overflow: TextOverflow.ellipsis,
                             style: TextStyle(
                               fontSize: 16,
@@ -86,7 +87,7 @@ class CustomElevatedButtonChannels extends StatelessWidget {
                         Spacer(),
                         Text(
                           DateFormat("hh:mm a")
-                              .format(DateTime.parse(channel["fecha"])),
+                              .format(DateTime.parse(channel.date)),
                           style: TextStyle(
                               fontSize: 10,
                               color: ColorUtil.getDateTextButtons(context)),
@@ -98,7 +99,7 @@ class CustomElevatedButtonChannels extends StatelessWidget {
                     width: 230,
                     child: Text(
                       maxLines: 2,
-                      channel['ultimo_mensaje'],
+                      channel.lastMessage,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                         fontSize: 12,

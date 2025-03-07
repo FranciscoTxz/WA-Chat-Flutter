@@ -2,9 +2,12 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'package:simple_menu/models/channels_model.dart';
+import 'package:simple_menu/models/status_model.dart';
 import 'package:simple_menu/resources/colors/colors_prime.dart';
 import 'package:simple_menu/resources/colors/light_and_dark_colors.dart';
 import 'package:simple_menu/viewmodel/channels_view_model.dart';
+import 'package:simple_menu/viewmodel/status_card_view_model.dart';
 import 'package:simple_menu/views/widgets/widgets.dart';
 
 class StatusScreen extends StatefulWidget {
@@ -19,14 +22,15 @@ class _StatusScreenState extends State<StatusScreen> {
   void initState() {
     super.initState();
     Provider.of<ChannelsViewModel>(context, listen: false).loadChannels();
+    Provider.of<StatusViewModel>(context, listen: false).loadStatus();
   }
 
-  void onButtonPressed(int index) {
-    print("Se tocó la tarjeta de ${status[index]["nombre"]}");
+  void onButtonPressed(StatusModel status) {
+    print("Se tocó la tarjeta de ${status.name}");
   }
 
-  void onButtonPressed2(int index) {
-    print("Se tocó la tarjeta de ${channels[index]["nombre"]}");
+  void onButtonPressed2(ChannelsModel channel) {
+    print("Se tocó la tarjeta de ${channel.name}");
   }
 
   void onButtonPressedUploadImage() {
@@ -36,6 +40,7 @@ class _StatusScreenState extends State<StatusScreen> {
   @override
   Widget build(BuildContext context) {
     final channelsVM = Provider.of<ChannelsViewModel>(context);
+    final statusVM = Provider.of<StatusViewModel>(context);
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -65,9 +70,8 @@ class _StatusScreenState extends State<StatusScreen> {
                 color: ColorUtil.getWhiteBlack(context)),
           ),
         ),
-        //TODO NEWS
         Expanded(
-          child: channelsVM.channels.isEmpty
+          child: statusVM.status.isEmpty
               ? Center(child: CircularProgressIndicator())
               : ListView.builder(
                   scrollDirection: Axis.horizontal,
@@ -76,8 +80,10 @@ class _StatusScreenState extends State<StatusScreen> {
                     return index != 0
                         ? StatusCard(
                             index: index - 1,
-                            onPressed: () => onButtonPressed(index - 1),
-                            stats: channelsVM.channels[index])
+                            onPressed: () =>
+                                onButtonPressed(statusVM.status[index - 1]),
+                            stat: statusVM.status[index - 1],
+                          )
                         : AddStatusCard(
                             onPressed: () => onButtonPressedUploadImage(),
                           );
@@ -97,17 +103,20 @@ class _StatusScreenState extends State<StatusScreen> {
           ),
         ),
         Expanded(
-          child: ListView.builder(
-            scrollDirection: Axis.vertical,
-            itemCount: channels.length,
-            itemBuilder: (context, index) {
-              return CustomElevatedButtonChannels(
-                index: index,
-                onPressed: () => onButtonPressed2(index),
-                channel: channels[index],
-              );
-            },
-          ),
+          child: channelsVM.channels.isEmpty
+              ? Center(child: CircularProgressIndicator())
+              : ListView.builder(
+                  scrollDirection: Axis.vertical,
+                  itemCount: channelsVM.channels.length,
+                  itemBuilder: (context, index) {
+                    return CustomElevatedButtonChannels(
+                      index: index,
+                      onPressed: () =>
+                          onButtonPressed2(channelsVM.channels[index]),
+                      channel: channelsVM.channels[index],
+                    );
+                  },
+                ),
         )
       ],
     );

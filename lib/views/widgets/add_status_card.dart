@@ -10,7 +10,7 @@ class AddStatusCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 180,
+      width: 160,
       child: GestureDetector(
         onTap: onPressed,
         child: Card(

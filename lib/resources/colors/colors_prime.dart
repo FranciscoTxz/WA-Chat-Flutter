@@ -41,6 +41,7 @@ abstract final class ColorsPrime {
   //Search Bar
   static const Color greySearchBar = Color(0xFF1A1A1A);
   static const Color greySearchBarText = Color(0xFF818181);
+  static const Color greySearchBarBack = Color(0xFFF6F6F6);
 
   // Status Card
   static const Color redStatus = Color(0xB2FF0000);
